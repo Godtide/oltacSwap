@@ -40,10 +40,6 @@ contract Oltac is ERC20, ERC20Burnable, Ownable {
   }
     
 
-//   function swap(_uint _amount) public payable {
-
-//   }
-    
 
 
 //   ------------------------------------------getters---------------------------
