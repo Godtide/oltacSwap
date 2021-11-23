@@ -20,6 +20,7 @@ contract Oltac is ERC20, ERC20Burnable, Ownable {
 
     tokenPrice = _tokenprice;
    _mint(msg.sender, _numberOfToken * (10 ** 18));
+   
 
   }
 
@@ -32,9 +33,11 @@ contract Oltac is ERC20, ERC20Burnable, Ownable {
 
       require(msg.value >= topay, " you don't have enough money" );
 
+      transferFrom(owner(), msg.sender, _amount);
+
       approve(msg.sender, _amount);
 
-      transferFrom(owner(), msg.sender, _amount);
+    
     
 
   }
